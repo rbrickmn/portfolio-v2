@@ -5,9 +5,12 @@ import Navbar from "../components/Navbar";
 const Projects = () => {
   // Adjusts the tab title based on location
   useEffect(() => {
-    document.title = "Riley Brickman | Projects"; // Set the tab title
+    // Set the tab title
+    document.title = "Riley Brickman | Projects";
+
+    // Reset the title when the component unmounts
     return () => {
-      document.title = "Riley Brickman | Front-End Engineer"; // Reset the title when the component unmounts
+      document.title = "Riley Brickman | Front-End Engineer";
     };
   }, []);
 
