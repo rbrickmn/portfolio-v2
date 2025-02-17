@@ -4,33 +4,35 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     title: "SyntaxSprint",
-    image: "/images/syntaxsprint.png",
+    desc: "The typing game for programmers!",
+    image: "public/projects/syntax-sprint-screenshot.png",
     techStack: ["React", "Tailwind", "Vite"],
     link: "https://syntaxsprint-app.vercel.app/",
+    type: 'web-app'
   },
   {
-    title: "MDlens",
-    image: "/images/mdlens.png",
+    title: "MixMaster",
+    desc: "Create Spotify playlists with ease. (Contact for demo!)",
+    image: "https://camo.githubusercontent.com/ff637ad98b205c5f9b8c4baaf4037b4238c2000a5673fa2d366117eccd4baef0/68747470733a2f2f692e6962622e636f2f4b3671305839302f6d69786d61737465722d657a6769662d636f6d2d766964656f2d746f2d6769662d636f6e7665727465722e676966",
     techStack: ["React", "Marked.js", "Tailwind"],
-    link: "https://mdlens.com",
+    link: "https://github.com/rbrickmn/mixmaster-app",
+    type: 'web-app'
   },
   {
-    title: "Movie Guesser",
-    image: "/images/movieguesser.png",
+    title: "MouseTrack",
+    desc: "Analyze your mouse performance right from the browser!",
+    image: "public/projects/mouse-track-screenshot.png",
     techStack: ["React", "Redux", "Giphy API"],
-    link: "https://movieguesser.com",
+    link: "https://mousetrack-app.vercel.app/",
+    type: 'web-app'
   },
   {
-    title: "Movie Guesser",
-    image: "/images/movieguesser.png",
+    title: "MarkdownLens (BETA)",
+    desc: "A simple, lightweight markdown editor/viewer.",
+    image: "public/projects/mdlens-screenshot.png",
     techStack: ["React", "Redux", "Giphy API"],
-    link: "https://movieguesser.com",
-  },
-  {
-    title: "Movie Guesser",
-    image: "/images/movieguesser.png",
-    techStack: ["React", "Redux", "Giphy API"],
-    link: "https://movieguesser.com",
+    link: "https://md-lens.vercel.app/",
+    type: 'web-app'
   },
 ];
 
