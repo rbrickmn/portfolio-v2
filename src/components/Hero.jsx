@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div className="hero bg-base min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col lg:flex-row gap-10">
         <img
           src="riley_portrait.png" // Replace with your actual profile image
           alt="Riley Brickman"
-          className="w-96 h-96 m-4 rounded-full shadow-lg object-cover"
+          className="w-96 h-96 m-4 rounded-box shadow-lg object-cover"
         />
 
         <div className="text-center lg:text-left">
