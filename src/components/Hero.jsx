@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="hero bg-base min-h-screen">
+    <div className="hero bg-base">
       <div className="hero-content flex-col lg:flex-row gap-10">
         <img
           src="riley_portrait.png" // Replace with your actual profile image

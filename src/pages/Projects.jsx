@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import React from "react";
 import Navbar from "../components/Navbar";
 import ProjectList from "../components/ProjectList";
+import Footer from "../components/Footer";
 
 const Projects = () => {
   // Adjusts the tab title based on location
@@ -20,6 +21,8 @@ const Projects = () => {
       <Navbar />
 
       <ProjectList />
+
+      <Footer />
     </>
   );
 };
