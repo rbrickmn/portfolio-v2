@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectFilter from "./ProjectFilter";
 
 const projects = [
   {
@@ -39,12 +40,24 @@ const projects = [
 ];
 
 const ProjectList = () => {
+  const [selectedType, setSelectedType] = useState("all-projects");
+
+  const filteredProjects =
+    selectedType === "all-projects"
+      ? projects
+      : projects.filter((project) => project.type === selectedType);
+
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h2 className="text-3xl font-bold text-center mb-4">Projects</h2>
-      <p className="text-xl text-center mb-8">View all of my work here!</p>
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
+    <div className="container mx-auto px-6 min-h-screen">
+      <h2 className="text-3xl font-bold text-center mb-4 mt-8">Projects</h2>
+      <p className="text-xl text-center">View all my work here!</p>
+      <ProjectFilter
+        selectedType={selectedType}
+        setSelectedType={setSelectedType}
+      />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProjects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
       </div>
