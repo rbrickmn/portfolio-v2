@@ -7,18 +7,26 @@ const Navbar = () => {
 
   const handleAboutClick = (e) => {
     e.preventDefault();
-    // If we're not on the home page, navigate to home first
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollToAbout: true } });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToAbout: true } });
     } else {
-      // If we're already on the home page, just scroll
-      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToContact: true } });
+    } else {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleHomeClick = (e) => {
-    // Navigate to home and explicitly set state to null to trigger top scroll
-    navigate('/', { state: null });
+    navigate("/", { state: null });
   };
 
   return (
@@ -54,11 +62,14 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a>Contact</a>
+              <a onClick={handleContactClick}>Contact</a>
             </li>
           </ul>
         </div>
-        <a onClick={handleHomeClick} className="btn btn-ghost text-xl cursor-pointer">
+        <a
+          onClick={handleHomeClick}
+          className="btn btn-ghost text-xl cursor-pointer"
+        >
           Riley Brickman
         </a>
       </div>
@@ -74,15 +85,13 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a>Contact</a>
+            <a onClick={handleContactClick}>Contact</a>
           </li>
         </ul>
       </div>
 
       {/* Github Link */}
-      <div className="navbar-end">
-        {/* Existing code */}
-      </div>
+      <div className="navbar-end">{/* Existing code */}</div>
     </header>
   );
 };
