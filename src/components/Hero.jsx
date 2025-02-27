@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero bg-base">
       <div className="hero-content flex-col lg:flex-row gap-10">
         <img
-          src="riley_portrait.png" // Replace with your actual profile image
+          src="riley_portrait.png"
           alt="Riley Brickman"
           className="w-96 h-96 m-4 rounded-box shadow-lg object-cover"
         />

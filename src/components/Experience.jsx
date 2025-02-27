@@ -3,7 +3,7 @@ import TechMarquee from "./TechMarquee";
 
 const Experience = () => {
   return (
-    <section className="py-16 bg-base-100">
+    <section id="about" className="py-16 bg-base-100">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column - About Me */}
@@ -29,14 +29,13 @@ const Experience = () => {
               <ul className="space-y-4">
                 <li className="p-4 bg-base-200 rounded-lg shadow-md">
                   <div className="flex justify-between mb-1">
-                    <span className="font-bold">
-                      Front-End Developer – Personal Projects & Open Source
-                    </span>
+                    <span className="font-bold">Front-End Developer</span>
+
                     <span className="text-primary">2022 - Present</span>
                   </div>
-                  {/* <span className="text-sm text-primary font-medium">
-                    WebDesignCo
-                  </span> */}
+                  <span className="text-sm text-primary font-medium">
+                    Personal Projects & Open Source
+                  </span>
                   <p className="mt-2">
                     Developed and maintained personal projects using HTML, CSS,
                     and JavaScript frameworks like React, focusing on responsive

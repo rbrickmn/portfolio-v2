@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Experience from "../components/Experience";
-import TechMarquee from "../components/TechMarquee";
 import Footer from "../components/Footer";
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if we need to scroll to the about section
+    if (location.state?.scrollToAbout) {
+      // Small timeout to ensure the page is fully loaded
+      setTimeout(() => {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+        // Clean up the state to avoid scrolling again on refresh
+        window.history.replaceState({}, document.title);
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />

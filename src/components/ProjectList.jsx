@@ -8,7 +8,7 @@ const projects = [
     desc: "The typing game for programmers!",
     image:
       "https://camo.githubusercontent.com/4a2711873e6b14cafa27aad9fd3403024c8d872ee1b86aff30a436395076fc66/68747470733a2f2f692e6962622e636f2f643456574c506e6d2f657a6769662d36613363656164396438326437342d657a6769662d636f6d2d766964656f2d746f2d6769662d636f6e7665727465722e676966",
-    techStack: ["React", "Tailwind", "Vite"],
+    techStack: ["React", "CSS", "Marked.js", "Vite"],
     link: "https://syntaxsprint-app.vercel.app/",
     type: "web-app",
   },
@@ -17,7 +17,7 @@ const projects = [
     desc: "Create Spotify playlists with ease.",
     image:
       "https://camo.githubusercontent.com/ff637ad98b205c5f9b8c4baaf4037b4238c2000a5673fa2d366117eccd4baef0/68747470733a2f2f692e6962622e636f2f4b3671305839302f6d69786d61737465722d657a6769662d636f6d2d766964656f2d746f2d6769662d636f6e7665727465722e676966",
-    techStack: ["React", "Marked.js", "Tailwind"],
+    techStack: ["React", "CSS", "Spotify API"],
     link: "https://github.com/rbrickmn/mixmaster-app",
     type: "web-app",
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "MouseTrack",
     desc: "Mouse performance analyzer",
     image: "public/projects/mouse-track-screenshot.png",
-    techStack: ["React", "Redux", "Giphy API"],
+    techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://mousetrack-app.vercel.app/",
     type: "web-app",
   },
