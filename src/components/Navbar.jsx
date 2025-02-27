@@ -16,6 +16,11 @@ const Navbar = () => {
     }
   };
 
+  const handleHomeClick = (e) => {
+    // Navigate to home and explicitly set state to null to trigger top scroll
+    navigate('/', { state: null });
+  };
+
   return (
     <header className="navbar bg-base-100 sticky top-0 z-10 shadow-md">
       <div className="navbar-start">
@@ -53,9 +58,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost text-xl">
+        <a onClick={handleHomeClick} className="btn btn-ghost text-xl cursor-pointer">
           Riley Brickman
-        </Link>
+        </a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -76,7 +81,7 @@ const Navbar = () => {
 
       {/* Github Link */}
       <div className="navbar-end">
-        {/* Existing content */}
+        {/* Existing code */}
       </div>
     </header>
   );

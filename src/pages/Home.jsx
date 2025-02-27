@@ -13,10 +13,18 @@ const Home = () => {
     if (location.state?.scrollToAbout) {
       // Small timeout to ensure the page is fully loaded
       setTimeout(() => {
-        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+        document
+          .getElementById("about")
+          ?.scrollIntoView({ behavior: "smooth" });
         // Clean up the state to avoid scrolling again on refresh
         window.history.replaceState({}, document.title);
       }, 100);
+    } else if (!location.state) {
+      // If there's no special state, scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }, [location]);
 
