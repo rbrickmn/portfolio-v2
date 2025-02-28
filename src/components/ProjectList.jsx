@@ -42,6 +42,7 @@ const projects = [
 const ProjectList = () => {
   const [selectedType, setSelectedType] = useState("all-projects");
 
+  // Filter logic
   const filteredProjects =
     selectedType === "all-projects"
       ? projects
@@ -51,16 +52,27 @@ const ProjectList = () => {
     <div className="container mx-auto px-6 min-h-screen">
       <h2 className="text-3xl font-bold text-center mb-4 mt-8">Projects</h2>
       <p className="text-xl text-center">View all my work here!</p>
+
+      {/* Filter Buttons */}
       <ProjectFilter
         selectedType={selectedType}
         setSelectedType={setSelectedType}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
+      {/* Conditional Rendering: If no projects, show a message */}
+      {filteredProjects.length === 0 ? (
+        <div className="flex justify-center items-center mt-16">
+          <p className="text-gray-500 text-lg">
+            Nothing to see here yet! Stay tuned :)
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
