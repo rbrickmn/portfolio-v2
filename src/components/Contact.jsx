@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 bg-base-200">
+    <section id="contact" className="py-16">
       <div className="container mx-auto px-6">
         <h2 className="text-2xl font-bold text-primary uppercase mb-2">
           CONTACT
@@ -38,7 +38,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <a
-                  href="mailto:riley.brickman@email.com"
+                  href="mailto:rbrickmn@gmail.com"
                   className="link link-hover"
                 >
                   rbrickmn@gmail.com

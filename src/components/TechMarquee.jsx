@@ -19,13 +19,13 @@ const TechMarquee = () => {
   const duplicatedTechnologies = [...technologies, ...technologies];
 
   return (
-    <div className="relative overflow-hidden bg-green-100 rounded-xl p-6">
+    <div className="relative overflow-hidden bg-base-200 shadow-md rounded-xl p-6">
       {/* Infinite scrolling container */}
       <div className="flex animate-marquee">
         {duplicatedTechnologies.map((tech, index) => (
           <div
           key={`${tech.name}-${index}`}
-          className={`flex items-center justify-center mx-4 w-14 h-14 ${tech.color} rounded-lg shadow-sm shrink-0`}
+          className={`flex items-center justify-center mx-4 w-14 h-14 ${tech.color} rounded-lg shrink-0`}
         >
           <img src={tech.logo} alt={tech.name} className="w-12 h-12 shrink-0" />
         </div>
