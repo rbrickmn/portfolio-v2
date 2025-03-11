@@ -43,6 +43,21 @@ const Experience = () => {
                     portfolio to transition into professional work.
                   </p>
                 </li>
+
+                <li className="p-4 bg-base-200 rounded-lg shadow-md">
+                  <div className="flex justify-between mb-1">
+                    <span className="font-bold">Your Next Developer</span>
+
+                    <span className="text-primary"></span>
+                  </div>
+                  <span className="text-sm text-primary font-medium">
+                    Your Company Here!
+                  </span>
+                  <p className="mt-2">
+                    I'm currently looking for a new opportunity! If you're
+                    interested in hiring me, please reach out.
+                  </p>
+                </li>
               </ul>
             </div>
           </div>
@@ -60,21 +75,42 @@ const Experience = () => {
             <TechMarquee />
 
             <div className="grid grid-cols-1 gap-6">
-              <div>
-                <h4 className="text-2xl font-semibold mb-2">SPECIALTY</h4>
-                <p className="text-xl">Front-End Development, UI/UX Design</p>
+              <div className="bg-base-200 p-6 rounded-lg shadow-md transform transition-transform hover:scale-102">
+                <h4 className="text-2xl font-semibold mb-4 flex items-center">
+                  <span className="text-primary mr-2">⚡</span> SPECIALTY
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <p className="text-xl">Front-End Development</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <p className="text-xl">UI/UX Design</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <p className="text-xl">Responsive Web Design</p>
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <h4 className="text-2xl font-semibold mb-2">EDUCATION</h4>
-                <p className="text-xl flex items-center gap-2">
-                  <span className="text-primary">🎓</span> A.A.S, Computer
-                  Technology
-                </p>
-                <p className="text-xl flex items-center gap-2">
-                  <span className="text-primary">📜</span> Career Path,
-                  Front-End Engineer
-                </p>
+              <div className="bg-base-200 p-6 rounded-lg shadow-md transform transition-transform hover:scale-102">
+                <h4 className="text-2xl font-semibold mb-4 flex items-center">
+                  <span className="text-primary mr-2">🎓</span> EDUCATION
+                </h4>
+                <div className="space-y-4">
+                  <div className="border-l-2 border-primary pl-4 py-1">
+                    <p className="text-xl font-medium">A.A.S, Computer Technology</p>
+                    <p className="text-sm text-primary">2020 - 2022</p>
+                    <p className="mt-1">Focused on network systems management and programming fundamentals</p>
+                  </div>
+                  <div className="border-l-2 border-primary pl-4 py-1">
+                    <p className="text-xl font-medium">Career Path, Front-End Engineer</p>
+                    <p className="text-sm text-primary">Jan. 2024 - Nov. 2024</p>
+                    <p className="mt-1">Intensive program covering modern JavaScript frameworks and UI/UX principles</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
