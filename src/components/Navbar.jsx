@@ -91,7 +91,7 @@ const Navbar = () => {
       </div>
 
       {/* Github Link */}
-      <div className="navbar-end">{/* Existing code */}</div>
+      <div className="navbar-end"></div>
     </header>
   );
 };

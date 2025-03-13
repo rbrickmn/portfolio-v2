@@ -1,7 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToContact: true } });
+    } else {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="hero bg-base">
       <div className="hero-content flex-col lg:flex-row gap-10">
@@ -25,7 +39,9 @@ const Hero = () => {
             experiences.
           </p>
           <div className="flex justify-center lg:justify-start gap-4">
-            <button className="btn btn-primary">Contact me</button>
+            <button className="btn btn-primary" onClick={handleContactClick}>
+              Contact me
+            </button>
             <button className="btn btn-outline btn-secondary">
               <Link to="/projects">View my work</Link>
             </button>

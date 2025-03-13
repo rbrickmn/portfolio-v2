@@ -102,11 +102,13 @@ const Experience = () => {
                 <div className="space-y-4">
                   <div className="border-l-2 border-primary pl-4 py-1">
                     <p className="text-xl font-medium">A.A.S, Computer Technology</p>
+                    <p className="text-sm text-primary font-medium">Tri-County Technical College</p>
                     <p className="text-sm text-primary">2020 - 2022</p>
                     <p className="mt-1">Focused on network systems management and programming fundamentals</p>
                   </div>
                   <div className="border-l-2 border-primary pl-4 py-1">
                     <p className="text-xl font-medium">Career Path, Front-End Engineer</p>
+                    <p className="text-sm text-primary font-medium">Codecademy</p>
                     <p className="text-sm text-primary">Jan. 2024 - Nov. 2024</p>
                     <p className="mt-1">Intensive program covering modern JavaScript frameworks and UI/UX principles</p>
                   </div>
