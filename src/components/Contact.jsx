@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Column - Contact Form or Additional Info */}
+          {/* Right Column - Working Hours */}
           <div className="bg-base-100 p-6 rounded-lg shadow-md">
             <h4 className="text-xl font-semibold mb-4">Working Hours</h4>
             <div className="space-y-2">

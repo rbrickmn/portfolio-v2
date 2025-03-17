@@ -22,11 +22,29 @@ const Hero = () => {
 
   return (
     <div className="min-h-[85vh] relative overflow-hidden">
-      
       <div className="container mx-auto px-4 py-8 md:py-0">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between min-h-[85vh]">
+          {/* Image section - moved up in mobile view using order classes */}
+          <div className="relative md:w-1/2 flex justify-center md:justify-end z-10 order-first md:order-last mb-8 md:mb-0">
+            <div className="relative">
+              {/* Decorative elements - enhanced glow effects */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-md"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-secondary/10 rounded-full blur-md"></div>
+              
+              {/* Main image with frame */}
+              <div className="relative rounded-2xl overflow-hidden border-4 border-base-100 shadow-2xl">
+                <img
+                  src="riley_portrait.jpg"
+                  alt="Riley Brickman"
+                  className="w-72 h-72 md:w-[450px] md:h-[450px] object-top object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          
           {/* Content section */}
-          <div className="text-center md:text-left max-w-xl md:w-1/2 z-10 mb-8 md:mb-0">
+          <div className="text-center md:text-left max-w-xl md:w-1/2 z-10">
             <div className="space-y-6">
               <div>
                 <h2 className="text-xl font-medium text-primary mb-2 tracking-wider">FRONT-END DEVELOPER</h2>
@@ -54,25 +72,6 @@ const Hero = () => {
                 >
                   View my work
                 </button>
-              </div>
-            </div>
-          </div>
-          
-          {/* Image section with enhanced styling */}
-          <div className="relative md:w-1/2 flex justify-center md:justify-end z-10">
-            <div className="relative">
-              {/* Decorative elements - enhanced glow effects */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-md"></div>
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-secondary/10 rounded-full blur-md"></div>
-              
-              {/* Main image with frame - removed overlay */}
-              <div className="relative rounded-2xl overflow-hidden border-4 border-base-100 shadow-2xl">
-                <img
-                  src="riley_portrait.jpg"
-                  alt="Riley Brickman"
-                  className="w-80 h-80 md:w-[450px] md:h-[450px] object-top object-cover"
-                />
               </div>
             </div>
           </div>
