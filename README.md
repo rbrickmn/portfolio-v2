@@ -52,4 +52,4 @@ This site is deployed on Vercel.
 
 ---
 
-© 2023 Riley Brickman
+© 2025 Riley Brickman
