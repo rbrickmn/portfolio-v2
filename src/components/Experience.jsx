@@ -3,7 +3,7 @@ import TechMarquee from "./TechMarquee";
 
 const Experience = () => {
   return (
-    <section id="about" className="py-16 bg-base-100">
+    <section id="about" className="py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column - About Me */}
@@ -30,7 +30,6 @@ const Experience = () => {
                 <li className="p-4 bg-base-200 rounded-lg shadow-md">
                   <div className="flex justify-between mb-1">
                     <span className="font-bold">Front-End Developer</span>
-
                     <span className="text-primary">2022 - Present</span>
                   </div>
                   <span className="text-sm text-primary font-medium">
@@ -47,7 +46,6 @@ const Experience = () => {
                 <li className="p-4 bg-base-200 rounded-lg shadow-md">
                   <div className="flex justify-between mb-1">
                     <span className="font-bold">Your Next Developer</span>
-
                     <span className="text-primary"></span>
                   </div>
                   <span className="text-sm text-primary font-medium">
@@ -75,7 +73,7 @@ const Experience = () => {
             <TechMarquee />
 
             <div className="grid grid-cols-1 gap-6">
-              <div className="bg-base-200 p-6 rounded-lg shadow-md transform transition-transform hover:scale-102">
+              <div className="bg-base-200 p-6 rounded-lg shadow-md">
                 <h4 className="text-2xl font-semibold mb-4 flex items-center">
                   <span className="text-primary mr-2">⚡</span> SPECIALTY
                 </h4>
@@ -95,7 +93,7 @@ const Experience = () => {
                 </div>
               </div>
 
-              <div className="bg-base-200 p-6 rounded-lg shadow-md transform transition-transform hover:scale-102">
+              <div className="bg-base-200 p-6 rounded-lg shadow-md">
                 <h4 className="text-2xl font-semibold mb-4 flex items-center">
                   <span className="text-primary mr-2">🎓</span> EDUCATION
                 </h4>
