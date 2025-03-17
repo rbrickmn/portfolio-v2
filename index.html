@@ -13,6 +13,15 @@
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#3B82F6" />
     
+    <!-- Accessibility Meta Tags -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Riley Brickman Portfolio" />
+    <meta name="application-name" content="Riley Brickman Portfolio" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="msapplication-config" content="none" />
+    
     <!-- Preload critical assets -->
     <link rel="preload" href="/riley_portrait.jpg" as="image" />
     <link rel="preload" href="/rb-favicon.svg" as="image" type="image/svg+xml" />
@@ -22,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" role="application"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
