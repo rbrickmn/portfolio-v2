@@ -1,10 +1,10 @@
 /**
- * Reusable skeleton loader component
- * Creates placeholder UI during content loading
+ * Skeleton UI component library
+ * Drop-in loading placeholders for common UI elements
  */
 
 const SkeletonLoader = ({ type = 'text', lines = 1, className = '', width = 'full' }) => {
-  // Different preset widths for variety
+  // Width presets for quick implementation
   const widths = {
     full: 'w-full',
     'three-quarters': 'w-3/4',
@@ -15,7 +15,7 @@ const SkeletonLoader = ({ type = 'text', lines = 1, className = '', width = 'ful
   
   const widthClass = widths[width] || 'w-full';
   
-  // Different types of skeleton loaders
+  // Render different skeleton shapes based on type prop
   switch (type) {
     case 'circle':
       return (
@@ -52,7 +52,7 @@ const SkeletonLoader = ({ type = 'text', lines = 1, className = '', width = 'ful
       return (
         <div className={`space-y-2 ${className}`}>
           {[...Array(lines)].map((_, i) => {
-            // Vary the widths for a more natural look
+            // Last line is shorter for a more realistic text block
             const lineWidth = i === lines - 1 && lines > 1 ? 'w-3/4' : 'w-full';
             return (
               <div key={i} className={`h-4 bg-gray-200 rounded animate-pulse ${lineWidth}`}></div>

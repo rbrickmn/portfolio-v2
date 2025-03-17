@@ -54,10 +54,10 @@ const ProjectList = () => {
   const [loading, setLoading] = useState(true);
   const [projectData, setProjectData] = useState([]);
 
-  // Simulate data loading
+  // Simulate API fetch with loading state
   useEffect(() => {
     setLoading(true);
-    // Simulate network request to get projects
+    // In a real app, this would be a fetch() call
     const timer = setTimeout(() => {
       setProjectData(projects);
       setLoading(false);
@@ -66,14 +66,14 @@ const ProjectList = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Filter logic
+  // Filter projects by selected category
   const filteredProjects =
     selectedType === "all-projects"
       ? projectData
       : projectData.filter((project) => project.type === selectedType);
 
   return (
-    <main
+    <main 
       className="container mx-auto px-6 min-h-screen"
       role="main"
       aria-label="Projects portfolio"
@@ -81,15 +81,15 @@ const ProjectList = () => {
       <h1 className="text-3xl font-bold text-center mb-4 mt-8">Projects</h1>
       <p className="text-xl text-center">View all my work here!</p>
 
-      {/* Filter Buttons */}
+      {/* Category filter buttons */}
       <ProjectFilter
         selectedType={selectedType}
         setSelectedType={setSelectedType}
       />
 
-      {/* Loading State */}
+      {/* Skeleton loaders during fetch */}
       {loading ? (
-        <div
+        <div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           role="status"
           aria-label="Loading projects"
@@ -101,11 +101,10 @@ const ProjectList = () => {
           ))}
         </div>
       ) : (
-        // Loaded Content
+        // Project grid or empty state
         <>
-          {/* Conditional Rendering: If no projects, show a message */}
           {filteredProjects.length === 0 ? (
-            <div
+            <div 
               className="flex justify-center items-center mt-16"
               role="alert"
             >
@@ -114,7 +113,7 @@ const ProjectList = () => {
               </p>
             </div>
           ) : (
-            <div
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               role="grid"
               aria-label="Project grid"

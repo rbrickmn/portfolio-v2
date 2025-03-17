@@ -2,12 +2,11 @@ import { useRef, useState } from "react";
 import { useIntersection, getSrcSet } from "../utils/imageOptimization";
 
 /**
- * OptimizedImage component for performance-optimized image loading
- * Features:
- * - Lazy loading with IntersectionObserver
- * - Responsive image sizes
- * - Loading placeholder
- * - Error handling
+ * Performance-optimized image component that handles:
+ * - Lazy loading only when scrolled into view
+ * - Responsive image sizing
+ * - Loading states with skeleton UI
+ * - Error handling for broken images
  */
 const OptimizedImage = ({
   src,
@@ -32,7 +31,7 @@ const OptimizedImage = ({
     setError(true);
   };
 
-  // Create container style with width/height if provided
+  // Merge dimension props with custom style
   const containerStyle = { 
     ...(width || height ? { width, height } : {}),
     ...style 
@@ -44,19 +43,19 @@ const OptimizedImage = ({
       style={containerStyle}
       ref={imgRef}
     >
-      {/* Loading skeleton */}
+      {/* Show loading skeleton until image loads */}
       {!isLoaded && !error && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
 
-      {/* Error state */}
+      {/* Show error state for broken images */}
       {error && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
           <span className="text-gray-500">Image failed to load</span>
         </div>
       )}
 
-      {/* The actual image */}
+      {/* Only render image when in viewport */}
       {isVisible && (
         <img
           src={src}

@@ -23,7 +23,7 @@ const ProjectCard = ({ title, desc, image, techStack, link }) => {
         onKeyPress={handleKeyPress}
         aria-label={`View ${title} project - ${desc}`}
       >
-        {/* Image container - no positioning issues */}
+        {/* Project screenshot background */}
         <div className="absolute inset-0 w-full h-full">
           <OptimizedImage
             src={image}
@@ -33,7 +33,7 @@ const ProjectCard = ({ title, desc, image, techStack, link }) => {
           />
         </div>
 
-        {/* Overlay (Hidden by Default, Shows on Hover) */}
+        {/* Info overlay - hidden until hover */}
         <div 
           className="absolute bottom-0 left-0 w-full bg-black bg-opacity-80 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity"
           role="contentinfo"
