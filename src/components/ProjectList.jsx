@@ -4,6 +4,15 @@ import ProjectFilter from "./ProjectFilter";
 
 const projects = [
   {
+    title: "Regex Playground",
+    desc: "A playground for regex",
+    image:
+      "https://i.ibb.co/KxgY5348/Screen-Shot-2025-03-17-at-10-13-18-AM.png",
+    techStack: ["React", "Tailwind CSS", "Vite"],
+    link: "https://regex-playground-gray.vercel.app/",
+    type: "web-app",
+  },
+  {
     title: "SyntaxSprint",
     desc: "The typing game for programmers!",
     image:
