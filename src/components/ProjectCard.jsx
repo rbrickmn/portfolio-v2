@@ -23,13 +23,12 @@ const ProjectCard = ({ title, desc, image, techStack, link }) => {
         onKeyPress={handleKeyPress}
         aria-label={`View ${title} project - ${desc}`}
       >
-        <div className="absolute inset-0">
+        {/* Image container - no positioning issues */}
+        <div className="absolute inset-0 w-full h-full">
           <OptimizedImage
             src={image}
             alt={`Screenshot of ${title} project`}
-            width="100%"
-            height="100%"
-            className="w-full h-full transition-transform transform group-hover:scale-105"
+            className="w-full h-full object-cover object-center"
             blur={true}
           />
         </div>
@@ -47,7 +46,7 @@ const ProjectCard = ({ title, desc, image, techStack, link }) => {
           </h3>
           <p className="text-sm">{desc}</p>
           <div 
-            className="flex gap-2 mt-2"
+            className="flex flex-wrap gap-2 mt-2"
             role="list"
             aria-label="Technologies used"
           >

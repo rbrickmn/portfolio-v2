@@ -17,6 +17,7 @@ const OptimizedImage = ({
   height,
   sizes = "100vw",
   blur = false,
+  style = {},
 }) => {
   const imgRef = useRef(null);
   const isVisible = useIntersection(imgRef, { rootMargin: "200px" });
@@ -31,10 +32,16 @@ const OptimizedImage = ({
     setError(true);
   };
 
+  // Create container style with width/height if provided
+  const containerStyle = { 
+    ...(width || height ? { width, height } : {}),
+    ...style 
+  };
+
   return (
     <div
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      className={`relative overflow-hidden h-full w-full ${className}`}
+      style={containerStyle}
       ref={imgRef}
     >
       {/* Loading skeleton */}
@@ -61,13 +68,13 @@ const OptimizedImage = ({
           onError={handleError}
           srcSet={getSrcSet(src)}
           sizes={sizes}
+          style={style}
           className={`
-            transition-opacity duration-300 ${
-              isLoaded ? "opacity-100" : "opacity-0"
-            }
+            w-full h-full transition-opacity duration-300 
+            ${isLoaded ? "opacity-100" : "opacity-0"}
             ${blur && isLoaded ? "blur-none" : ""}
             ${blur && !isLoaded ? "blur-sm scale-105" : ""}
-             object-cover
+            object-cover
           `}
         />
       )}

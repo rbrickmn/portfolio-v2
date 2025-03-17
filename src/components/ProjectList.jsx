@@ -73,7 +73,7 @@ const ProjectList = () => {
       : projectData.filter((project) => project.type === selectedType);
 
   return (
-    <main 
+    <main
       className="container mx-auto px-6 min-h-screen"
       role="main"
       aria-label="Projects portfolio"
@@ -89,7 +89,7 @@ const ProjectList = () => {
 
       {/* Loading State */}
       {loading ? (
-        <div 
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           role="status"
           aria-label="Loading projects"
@@ -105,7 +105,7 @@ const ProjectList = () => {
         <>
           {/* Conditional Rendering: If no projects, show a message */}
           {filteredProjects.length === 0 ? (
-            <div 
+            <div
               className="flex justify-center items-center mt-16"
               role="alert"
             >
@@ -114,7 +114,7 @@ const ProjectList = () => {
               </p>
             </div>
           ) : (
-            <div 
+            <div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               role="grid"
               aria-label="Project grid"

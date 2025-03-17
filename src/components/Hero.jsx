@@ -47,14 +47,13 @@ const Hero = () => {
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-secondary/10 rounded-full blur-md" aria-hidden="true"></div>
               
               {/* Main image with frame */}
-              <div className="relative rounded-2xl overflow-hidden border-4 border-base-100 shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden border-4 border-base-100 shadow-2xl w-72 h-72 md:w-[450px] md:h-[450px]">
                 <OptimizedImage
                   src="/riley_portrait.jpg"
                   alt="Portrait of Riley Brickman"
-                  width={450}
-                  height={450}
+                  className="object-cover"
+                  style={{ objectPosition: "center 0%" }}
                   sizes="(max-width: 768px) 288px, 450px"
-                  className="w-72 h-72 md:w-[450px] md:h-[450px]"
                   blur={true}
                 />
               </div>
