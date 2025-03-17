@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import FadeInWrapper from "../components/FadeInWrapper";
 
 const Home = () => {
   const location = useLocation();
@@ -13,18 +14,22 @@ const Home = () => {
     // Check if we need to scroll to a specific section
     if (location.state?.scrollToAbout) {
       setTimeout(() => {
-        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+        document
+          .getElementById("about")
+          ?.scrollIntoView({ behavior: "smooth" });
         window.history.replaceState({}, document.title);
       }, 100);
     } else if (location.state?.scrollToContact) {
       setTimeout(() => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" });
         window.history.replaceState({}, document.title);
       }, 100);
     } else if (!location.state) {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   }, [location]);
@@ -32,8 +37,10 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Experience />
+      <FadeInWrapper>
+        <Hero />
+        <Experience />
+      </FadeInWrapper>
       <Contact />
       <Footer />
     </>

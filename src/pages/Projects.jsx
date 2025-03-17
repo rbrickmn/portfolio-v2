@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import ProjectList from "../components/ProjectList";
 import Footer from "../components/Footer";
 import useScrollToTop from "../hooks/useScrollToTop";
+import FadeInWrapper from "../components/FadeInWrapper";
 
 const Projects = () => {
   // Scroll to top when navigating to this page
@@ -23,8 +24,10 @@ const Projects = () => {
   return (
     <>
       <Navbar />
-      <ProjectList />
-      <Footer />
+      <FadeInWrapper>
+        <ProjectList />
+        <Footer />
+      </FadeInWrapper>
     </>
   );
 };
