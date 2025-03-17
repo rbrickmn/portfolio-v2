@@ -2,6 +2,17 @@ import React from "react";
 import TechMarquee from "./TechMarquee";
 
 const Experience = () => {
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToContact: true } });
+    } else {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="about" className="py-16">
       <div className="container mx-auto px-6">
@@ -101,25 +112,43 @@ const Experience = () => {
             </h4>
             <div className="space-y-4">
               <div className="border-l-2 border-primary pl-4 py-1">
-                <p className="text-lg font-medium">A.A.S, Computer Technology</p>
-                <p className="text-sm text-primary font-medium">Tri-County Technical College</p>
+                <p className="text-lg font-medium">
+                  A.A.S, Computer Technology
+                </p>
+                <p className="text-sm text-primary font-medium">
+                  Tri-County Technical College
+                </p>
                 <p className="text-sm text-primary">2020 - 2022</p>
-                <p className="mt-1 text-sm">Focused on network systems management and programming fundamentals</p>
+                <p className="mt-1 text-sm">
+                  Focused on network systems management and programming
+                  fundamentals
+                </p>
               </div>
               <div className="border-l-2 border-primary pl-4 py-1">
-                <p className="text-lg font-medium">Career Path, Front-End Engineer</p>
+                <p className="text-lg font-medium">
+                  Career Path, Front-End Engineer
+                </p>
                 <p className="text-sm text-primary font-medium">Codecademy</p>
                 <p className="text-sm text-primary">Jan. 2024 - Nov. 2024</p>
-                <p className="mt-1 text-sm">Intensive program covering modern JavaScript frameworks and UI/UX principles</p>
+                <p className="mt-1 text-sm">
+                  Intensive program covering modern JavaScript frameworks and
+                  UI/UX principles
+                </p>
               </div>
             </div>
           </div>
 
           {/* Contact CTA Box - Optional addition */}
           <div className="md:col-span-3 bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-xl shadow-md text-center">
-            <h4 className="text-2xl font-semibold mb-2">Ready to collaborate?</h4>
-            <p className="mb-4">I'm currently available for new opportunities!</p>
-            <a href="#contact" className="btn btn-primary">Get in Touch</a>
+            <h4 className="text-2xl font-semibold mb-2">
+              Ready to collaborate?
+            </h4>
+            <p className="mb-4">
+              I'm currently available for new opportunities!
+            </p>
+            <button onClick={handleContactClick} className="btn btn-primary">
+              Get in Touch
+            </button>
           </div>
         </div>
       </div>
