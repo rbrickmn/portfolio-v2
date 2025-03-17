@@ -39,8 +39,8 @@ const Home = () => {
       <Navbar />
       <FadeInWrapper>
         <Hero />
-        <Experience />
       </FadeInWrapper>
+      <Experience />
       <Contact />
       <Footer />
     </>

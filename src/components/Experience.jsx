@@ -71,7 +71,7 @@ const Experience = () => {
 
           {/* Experience Box - Spans 2 columns */}
           <div className="md:col-span-2 bg-base-200 p-6 rounded-xl shadow-md">
-            <h4 className="text-2xl font-semibold mb-4">Experience</h4>
+            <h4 className="text-2xl font-semibold mb-4"><span className="text-primary mr-2">👨‍💻</span>Experience</h4>
             <ul className="space-y-4">
               <li className="p-4 bg-base-100 rounded-lg shadow-sm">
                 <div className="flex justify-between mb-1">
