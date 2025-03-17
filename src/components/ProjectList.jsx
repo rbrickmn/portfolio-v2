@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectFilter from "./ProjectFilter";
+import SkeletonLoader from "./SkeletonLoader";
 
 const projects = [
   {
@@ -33,7 +34,7 @@ const projects = [
   {
     title: "MouseTrack",
     desc: "Mouse performance analyzer",
-    image: "public/projects/mouse-track-screenshot.png",
+    image: "/projects/mouse-track-screenshot.png",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://mousetrack-app.vercel.app/",
     type: "web-app",
@@ -41,7 +42,7 @@ const projects = [
   {
     title: "MarkdownLens (BETA)",
     desc: "A simple, lightweight markdown editor/viewer.",
-    image: "public/projects/mdlens-screenshot.png",
+    image: "/projects/mdlens-screenshot.png",
     techStack: ["React", "Redux", "Giphy API"],
     link: "https://md-lens.vercel.app/",
     type: "web-app",
@@ -50,12 +51,26 @@ const projects = [
 
 const ProjectList = () => {
   const [selectedType, setSelectedType] = useState("all-projects");
+  const [loading, setLoading] = useState(true);
+  const [projectData, setProjectData] = useState([]);
+
+  // Simulate data loading
+  useEffect(() => {
+    setLoading(true);
+    // Simulate network request to get projects
+    const timer = setTimeout(() => {
+      setProjectData(projects);
+      setLoading(false);
+    }, 800); // Simulate loading delay for demonstration
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Filter logic
   const filteredProjects =
     selectedType === "all-projects"
-      ? projects
-      : projects.filter((project) => project.type === selectedType);
+      ? projectData
+      : projectData.filter((project) => project.type === selectedType);
 
   return (
     <div className="container mx-auto px-6 min-h-screen">
@@ -68,19 +83,33 @@ const ProjectList = () => {
         setSelectedType={setSelectedType}
       />
 
-      {/* Conditional Rendering: If no projects, show a message */}
-      {filteredProjects.length === 0 ? (
-        <div className="flex justify-center items-center mt-16">
-          <p className="text-gray-500 text-lg">
-            Nothing to see here yet! Stay tuned :)
-          </p>
-        </div>
-      ) : (
+      {/* Loading State */}
+      {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+          {[...Array(6)].map((_, index) => (
+            <div key={index} className="w-full h-64">
+              <SkeletonLoader type="card" className="h-full" />
+            </div>
           ))}
         </div>
+      ) : (
+        // Loaded Content
+        <>
+          {/* Conditional Rendering: If no projects, show a message */}
+          {filteredProjects.length === 0 ? (
+            <div className="flex justify-center items-center mt-16">
+              <p className="text-gray-500 text-lg">
+                Nothing to see here yet! Stay tuned :)
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredProjects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

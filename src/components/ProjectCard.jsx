@@ -1,4 +1,5 @@
 import React from "react";
+import OptimizedImage from "./OptimizedImage";
 
 const ProjectCard = ({ title, desc, image, techStack, link }) => {
   return (
@@ -8,10 +9,16 @@ const ProjectCard = ({ title, desc, image, techStack, link }) => {
       rel="noopener noreferrer"
       className="relative group w-full h-64 rounded-lg overflow-hidden shadow-lg"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-transform transform group-hover:scale-105"
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
+      <div className="absolute inset-0">
+        <OptimizedImage
+          src={image}
+          alt={title}
+          width="100%"
+          height="100%"
+          className="w-full h-full transition-transform transform group-hover:scale-105"
+          blur={true}
+        />
+      </div>
 
       {/* Overlay (Hidden by Default, Shows on Hover) */}
       <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-80 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity">

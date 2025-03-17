@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -34,10 +35,14 @@ const Hero = () => {
               
               {/* Main image with frame */}
               <div className="relative rounded-2xl overflow-hidden border-4 border-base-100 shadow-2xl">
-                <img
-                  src="riley_portrait.jpg"
+                <OptimizedImage
+                  src="/riley_portrait.jpg"
                   alt="Riley Brickman"
-                  className="w-72 h-72 md:w-[450px] md:h-[450px] object-top object-cover"
+                  width={450}
+                  height={450}
+                  sizes="(max-width: 768px) 288px, 450px"
+                  className="w-72 h-72 md:w-[450px] md:h-[450px]"
+                  blur={true}
                 />
               </div>
             </div>
