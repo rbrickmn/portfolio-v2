@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
-// Use React.lazy for code splitting
+// Code splitting
 const Home = lazy(() => import("./pages/Home"));
 const Projects = lazy(() => import("./pages/Projects"));
 
-// Loading component 
+// Loading component
 const PageLoader = () => (
   <div className="flex justify-center items-center min-h-screen">
     <div className="animate-pulse">
@@ -24,13 +25,14 @@ function App() {
         {/* Global background gradient */}
         <div className="fixed inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
 
-        {/* Main content with proper z-index layering */}
+        {/* Main content */}
         <div className="relative z-0">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
             </Routes>
+            <Analytics />
           </Suspense>
         </div>
       </div>
