@@ -13,6 +13,23 @@ const Experience = () => {
     }
   };
 
+  const handleTechStackClick = (e) => {
+    e.preventDefault();
+    const techStackElement = document.getElementById("tech-stack");
+    if (techStackElement) {
+      // Get the element's position
+      const elementPosition = techStackElement.getBoundingClientRect().top;
+      // Get the current scroll position
+      const offsetPosition = elementPosition + window.pageYOffset - 80; // 80px offset to account for navbar
+
+      // Scroll to the adjusted position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section id="about" className="py-16">
       <div className="container mx-auto px-6">
@@ -31,17 +48,28 @@ const Experience = () => {
           {/* Profile Box - Spans 2 columns on md screens */}
           <div className="md:col-span-2 bg-base-200 p-6 rounded-xl shadow-md">
             <p className="text-lg">
-              As a junior front-end developer, I am skilled in HTML, CSS,
-              JavaScript, and Bootstrap. I have a meticulous eye for design
-              which allows me to create beautiful, responsive websites from the
-              ground up. My specialty involves utilizing UI/UX best practices
-              alongside clean, efficient code to deliver impeccable digital
-              experiences.
+              I am a passionate front-end developer with a love and appreciation
+              for design. With over 2 years of experience in a{" "}
+              <a
+                href="#tech-stack"
+                onClick={handleTechStackClick}
+                className="text-primary font-medium underline underline-offset-2 hover:text-primary/80 transition-colors duration-300 cursor-pointer"
+                tabIndex="0"
+                aria-label="View my tech stack"
+                onKeyDown={(e) => e.key === "Enter" && handleTechStackClick(e)}
+              >
+                variety of technologies
+              </a>
+              , I am ready to be your next front-end developer. I have a
+              meticulous eye for design which allows me to create beautiful,
+              responsive websites from the ground up. My specialty involves
+              utilizing UI/UX best practices alongside clean, efficient code to
+              deliver impeccable digital experiences.
             </p>
           </div>
 
           {/* Specialty Box */}
-          <div className="bg-base-200 p-6 rounded-xl shadow-md">
+          <div className="bg-base-200 p-6 rounded-xl shadow-md ">
             <h4 className="text-2xl font-semibold mb-4 flex items-center">
               <span className="text-primary mr-2">⚡</span> SPECIALTY
             </h4>
@@ -62,7 +90,7 @@ const Experience = () => {
           </div>
 
           {/* Tech Stack Box - Spans full width */}
-          <div className="md:col-span-3">
+          <div id="tech-stack" className="md:col-span-3">
             <h4 className="text-2xl font-bold text-primary uppercase mb-4">
               TECH STACK
             </h4>
@@ -71,7 +99,9 @@ const Experience = () => {
 
           {/* Experience Box - Spans 2 columns */}
           <div className="md:col-span-2 bg-base-200 p-6 rounded-xl shadow-md">
-            <h4 className="text-2xl font-semibold mb-4"><span className="text-primary mr-2">👨‍💻</span>Experience</h4>
+            <h4 className="text-2xl font-semibold mb-4">
+              <span className="text-primary mr-2">👨‍💻</span>Experience
+            </h4>
             <ul className="space-y-4">
               <li className="p-4 bg-base-100 rounded-lg shadow-sm">
                 <div className="flex justify-between mb-1">

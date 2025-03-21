@@ -71,6 +71,33 @@ const Contact = () => {
                   linkedin.com/in/riley-brickman-403537338/
                 </a>
               </div>
+
+              <div className="flex items-center gap-3">
+                <div className="bg-primary rounded-full p-2 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
+                  </svg>
+                </div>
+                <a
+                  href="https://github.com/rbrickmn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link link-hover"
+                >
+                  github.com/rbrickmn
+                </a>
+              </div>
             </div>
           </div>
 
