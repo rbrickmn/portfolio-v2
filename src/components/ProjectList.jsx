@@ -47,6 +47,22 @@ const projects = [
     link: "https://md-lens.vercel.app/",
     type: "web-app",
   },
+  {
+    title: "T.L. Hanna - Tidings 2019",
+    desc: "Lead editor for T.L. Hanna High School's 2019 Yearbook",
+    image: "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/481947991_2020662228438614_6801420305767945540_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=8WMv6AboohwQ7kNvwHwCXX1&_nc_oc=AdnABxvxnKWr0AyyhA6PkFjlg7Jt3TfAAhu4BX4dokLkZpvePx9imGK1dowYh7wXFzAFN3SoSA0p955g1evEbWa3&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=7Hzsa9GDYYzgdkLhdlfmwA&oh=00_AfH1I84LN85S232Rk3fWCaf0xx6mM3xshiJePg63P5rf0g&oe=68157B3C",
+    techStack: ["Photography", "Photo Editing", "Digital Asset Management (DAM)", "Leadership"],
+    link: "https://tlhanna.anderson5.net/",
+    type: "photography",
+  },
+  {
+    title: "T.L. Hanna - Tidings 2020",
+    desc: "Lead editor for T.L. Hanna High School's 2020 Yearbook",
+    image: "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/481947991_2020662228438614_6801420305767945540_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=8WMv6AboohwQ7kNvwHwCXX1&_nc_oc=AdnABxvxnKWr0AyyhA6PkFjlg7Jt3TfAAhu4BX4dokLkZpvePx9imGK1dowYh7wXFzAFN3SoSA0p955g1evEbWa3&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=7Hzsa9GDYYzgdkLhdlfmwA&oh=00_AfH1I84LN85S232Rk3fWCaf0xx6mM3xshiJePg63P5rf0g&oe=68157B3C",
+    techStack: ["Photography", "Photo Editing", "Digital Asset Management (DAM)", "Leadership"],
+    link: "https://tlhanna.anderson5.net/",
+    type: "photography",
+  },
 ];
 
 const ProjectList = () => {
