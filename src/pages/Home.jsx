@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Experience from "../components/Experience";
+import LatestProjects from "../components/LatestProjects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import FadeInWrapper from "../components/FadeInWrapper";
@@ -40,6 +41,7 @@ const Home = () => {
       <FadeInWrapper>
         <Hero />
       </FadeInWrapper>
+      <LatestProjects />
       <Experience />
       <Contact />
       <Footer />
