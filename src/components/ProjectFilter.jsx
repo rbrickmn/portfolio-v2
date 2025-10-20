@@ -1,7 +1,12 @@
 import React from "react";
 
 const ProjectFilter = ({ selectedType, setSelectedType }) => {
-  const filters = ["all-projects", "web-app", "photography"];
+  const filters = [
+    "all-projects",
+    "chrome-extension",
+    "web-app",
+    "photography",
+  ];
 
   // Capitalize first letter of each filter
   const formatFilterText = (text) =>

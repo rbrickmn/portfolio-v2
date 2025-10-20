@@ -5,6 +5,14 @@ import SkeletonLoader from "./SkeletonLoader";
 
 const projects = [
   {
+    title: "ZenTab",
+    desc: "The minimalist new tab replacement for Chrome.",
+    image: "/projects/zentab-main.png",
+    techStack: ["HTML", "CSS", "JavaScript", "Chrome Extension"],
+    link: "https://github.com/rbrickmn/zentab",
+    type: "chrome-extension",
+  },
+  {
     title: "Regex Playground",
     desc: "A playground for regex",
     image: "/projects/regexpg.png",
@@ -80,7 +88,6 @@ const ProjectList = () => {
   // Simulate API fetch with loading state
   useEffect(() => {
     setLoading(true);
-    // In a real app, this would be a fetch() call
     const timer = setTimeout(() => {
       setProjectData(projects);
       setLoading(false);
