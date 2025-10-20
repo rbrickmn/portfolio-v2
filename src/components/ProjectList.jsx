@@ -7,8 +7,7 @@ const projects = [
   {
     title: "Regex Playground",
     desc: "A playground for regex",
-    image:
-      "https://i.ibb.co/KxgY5348/Screen-Shot-2025-03-17-at-10-13-18-AM.png",
+    image: "/projects/regexpg.png",
     techStack: ["React", "Tailwind CSS", "Vite"],
     link: "https://regex-playground-gray.vercel.app/",
     type: "web-app",
@@ -16,8 +15,7 @@ const projects = [
   {
     title: "SyntaxSprint",
     desc: "The typing game for programmers!",
-    image:
-      "https://camo.githubusercontent.com/4a2711873e6b14cafa27aad9fd3403024c8d872ee1b86aff30a436395076fc66/68747470733a2f2f692e6962622e636f2f643456574c506e6d2f657a6769662d36613363656164396438326437342d657a6769662d636f6d2d766964656f2d746f2d6769662d636f6e7665727465722e676966",
+    image: "/projects/syntaxsprint.gif",
     techStack: ["React", "CSS", "Marked.js", "Vite"],
     link: "https://syntaxsprint-app.vercel.app/",
     type: "web-app",
@@ -25,8 +23,7 @@ const projects = [
   {
     title: "MixMaster",
     desc: "Create Spotify playlists with ease.",
-    image:
-      "https://camo.githubusercontent.com/ff637ad98b205c5f9b8c4baaf4037b4238c2000a5673fa2d366117eccd4baef0/68747470733a2f2f692e6962622e636f2f4b3671305839302f6d69786d61737465722d657a6769662d636f6d2d766964656f2d746f2d6769662d636f6e7665727465722e676966",
+    image: "/projects/mixmaster.gif",
     techStack: ["React", "CSS", "Spotify API"],
     link: "https://github.com/rbrickmn/mixmaster-app",
     type: "web-app",
@@ -50,16 +47,26 @@ const projects = [
   {
     title: "T.L. Hanna - Tidings 2019",
     desc: "Lead editor for T.L. Hanna High School's 2019 Yearbook",
-    image: "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/481947991_2020662228438614_6801420305767945540_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=8WMv6AboohwQ7kNvwHwCXX1&_nc_oc=AdnABxvxnKWr0AyyhA6PkFjlg7Jt3TfAAhu4BX4dokLkZpvePx9imGK1dowYh7wXFzAFN3SoSA0p955g1evEbWa3&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=7Hzsa9GDYYzgdkLhdlfmwA&oh=00_AfH1I84LN85S232Rk3fWCaf0xx6mM3xshiJePg63P5rf0g&oe=68157B3C",
-    techStack: ["Photography", "Photo Editing", "Digital Asset Management (DAM)", "Leadership"],
+    image: "/projects/tlh.jpg",
+    techStack: [
+      "Photography",
+      "Photo Editing",
+      "Digital Asset Management (DAM)",
+      "Leadership",
+    ],
     link: "https://tlhanna.anderson5.net/",
     type: "photography",
   },
   {
     title: "T.L. Hanna - Tidings 2020",
     desc: "Lead editor for T.L. Hanna High School's 2020 Yearbook",
-    image: "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/481947991_2020662228438614_6801420305767945540_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=8WMv6AboohwQ7kNvwHwCXX1&_nc_oc=AdnABxvxnKWr0AyyhA6PkFjlg7Jt3TfAAhu4BX4dokLkZpvePx9imGK1dowYh7wXFzAFN3SoSA0p955g1evEbWa3&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=7Hzsa9GDYYzgdkLhdlfmwA&oh=00_AfH1I84LN85S232Rk3fWCaf0xx6mM3xshiJePg63P5rf0g&oe=68157B3C",
-    techStack: ["Photography", "Photo Editing", "Digital Asset Management (DAM)", "Leadership"],
+    image: "/projects/tlh.jpg",
+    techStack: [
+      "Photography",
+      "Photo Editing",
+      "Digital Asset Management (DAM)",
+      "Leadership",
+    ],
     link: "https://tlhanna.anderson5.net/",
     type: "photography",
   },
@@ -89,7 +96,7 @@ const ProjectList = () => {
       : projectData.filter((project) => project.type === selectedType);
 
   return (
-    <main 
+    <main
       className="container mx-auto px-6 min-h-screen"
       role="main"
       aria-label="Projects portfolio"
@@ -105,7 +112,7 @@ const ProjectList = () => {
 
       {/* Skeleton loaders during fetch */}
       {loading ? (
-        <div 
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           role="status"
           aria-label="Loading projects"
@@ -120,7 +127,7 @@ const ProjectList = () => {
         // Project grid or empty state
         <>
           {filteredProjects.length === 0 ? (
-            <div 
+            <div
               className="flex justify-center items-center mt-16"
               role="alert"
             >
@@ -129,7 +136,7 @@ const ProjectList = () => {
               </p>
             </div>
           ) : (
-            <div 
+            <div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               role="grid"
               aria-label="Project grid"
