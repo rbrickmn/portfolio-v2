@@ -16,7 +16,7 @@ const TechMarquee = () => {
   ];
 
   // Duplicate the array to create a seamless loop
-  const duplicatedTechnologies = [...technologies, ...technologies];
+  const duplicatedTechnologies = [...technologies, ...technologies, ...technologies];
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-primary/10 to-secondary/10 shadow-md rounded-xl p-6">
